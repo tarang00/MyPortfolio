@@ -1,0 +1,444 @@
+<!--
+  PORTFOLIO WEBSITE - TARANG LILHARE
+  
+  FEATURES:
+  - Fully responsive design that works on all devices (mobile, tablet, desktop)
+  - Dark/light theme toggle with smooth transitions
+  - Modern UI with glass morphism effects
+  - Advanced scrolling animations and reveals
+  - 3D parallax effects on hero section
+  - Interactive cursor effects
+  - Smooth scroll behavior
+  - Dynamic skill cards with hover animations
+  - Timeline animation for experience section
+  - Project cards with hover effects
+  - Animated contact form with validation
+  - Canvas background with interactive particles
+  - Performance optimized with minimal code
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarang Lilhare | Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Canvas Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Tarang<span>Lilhare</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle animate-fade-in">Hello, I'm a Developer</div>
+                <h1 class="hero-title animate-fade-in">Crafting Digital <span>Experiences</span> Through Code</h1>
+                <p class="hero-description animate-fade-in">A passionate full-stack developer specialized in creating modern and interactive web applications with clean, efficient code.</p>
+                <div class="hero-buttons animate-fade-in">
+                    <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links animate-fade-in">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="scroll-indicator">
+            <!-- <span>Scroll</span> -->
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">About Me</h2>
+                <p class="section-subtitle reveal-text">Get to know me and my journey in web development</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal-left">
+                    <div class="about-img-container">
+                        <img src="/assets/taranglilhare.jpg" alt="Profile" class="about-img">
+                    </div>
+                    <div class="about-decoration"></div>
+                </div>
+                <div class="about-text reveal-right">
+                    <p>I'm a passionate web developer with a strong focus on creating intuitive, responsive, and visually appealing web applications. With expertise in front-end and back-end technologies, I bring creative ideas to life through clean and efficient code.</p>
+                    <p>During my journey as a developer, I've worked with various clients and companies, including managing a 32K+ followers account at Hactar and freelancing as a web developer. My approach combines technical excellence with creative problem-solving.</p>
+                    <p>I'm constantly learning and adapting to new technologies to stay at the cutting edge of web development. I believe in creating web experiences that not only look great but also provide exceptional user experience and performance.</p>
+                    <a href="My Resume.pdf_20240820_174910_0000-2.pdf.pdf" class="btn btn-primary">Download CV <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">My Skills</h2>
+                <p class="section-subtitle reveal-text">The technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h3 class="skill-title">HTML5</h3>
+                        <p class="skill-description">Creating well-structured, semantic, and accessible HTML code for modern web applications.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <h3 class="skill-title">CSS3</h3>
+                        <p class="skill-description">Styling web applications with modern CSS techniques including Flexbox, Grid, and animations.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-js skill-icon"></i>
+                        <h3 class="skill-title">JavaScript</h3>
+                        <p class="skill-description">Building interactive web applications with vanilla JavaScript and modern ES6+ features.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-react skill-icon"></i>
+                        <h3 class="skill-title">TailwindCSS</h3>
+                        <p class="skill-description">Creating responsive and utility-first designs with the popular TailwindCSS framework.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-git-alt skill-icon"></i>
+                        <h3 class="skill-title">Git & GitHub</h3>
+                        <p class="skill-description">Proficient in version control with Git and collaborative development via GitHub.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-figma skill-icon"></i>
+                        <h3 class="skill-title">Figma</h3>
+                        <p class="skill-description">Translating design mockups into functional web interfaces with pixel-perfect accuracy.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fab fa-instagram skill-icon"></i>
+                        <h3 class="skill-title">Social Media</h3>
+                        <p class="skill-description">Growing and managing social media accounts with strategic content planning and analytics.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal-fade">
+                    <div class="skill-card-inner">
+                        <i class="fas fa-mobile-alt skill-icon"></i>
+                        <h3 class="skill-title">Responsive Design</h3>
+                        <p class="skill-description">Creating websites that work flawlessly across all devices and screen sizes.</p>
+                        <div class="skill-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Experience</h2>
+                <p class="section-subtitle reveal-text">My professional journey and work experience</p>
+            </div>
+            <div class="experience-container">
+                <div class="timeline">
+                    <div class="timeline-item reveal-fade">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - Present</div>
+                            <h3 class="timeline-title">Social Media Manager</h3>
+                            <p class="timeline-subtitle">Hactar</p>
+                            <p>Managing 32K+ followers across multiple social media platforms. Creating engaging content, analyzing metrics, and implementing growth strategies to increase audience engagement and brand awareness.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item reveal-fade">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - Present</div>
+                            <h3 class="timeline-title">Web Developer</h3>
+                            <p class="timeline-subtitle">Freelance</p>
+                            <p>Working with various clients to build responsive and modern websites. Specializing in front-end development with HTML, CSS, JavaScript, and TailwindCSS to create engaging user experiences.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-item reveal-fade">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - 2024</div>
+                            <h3 class="timeline-title">UI/UX Designer</h3>
+                            <p class="timeline-subtitle">Alfido Tech Intern</p>
+                            <p>In four month Intern I Created user-centered designs for web and mobile applications. Conducted user research, developed wireframes, prototypes, and collaborated with development teams to implement designs.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Projects</h2>
+                <p class="section-subtitle reveal-text">A selection of my recent work and personal projects</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-fade">
+                    <div class="project-image-container">
+                        <img src="/assets/project-gym.png" alt="AT's Gym Website" class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">AT's Gym</h3>
+                        <p class="project-description">A modern Gym Fitness platform with responsive design, Services filtering, Budget & Discount calculator, and AI Assistant.</p>
+                        <div class="project-links">
+                            <a href="https://atsgym.github.io/AtsGym/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/tarang00/GYM-WebPro" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal-fade">
+                    <div class="project-image-container">
+                        <img src="/assets/Project-Pluming.png" alt="Plumbing Services Website" class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Plumbing Services</h3>
+                        <p class="project-description">A Plumbing Services website that showcases plumbing services with responsive design, and a contact form for inquiries.</p>
+                        <div class="project-links">
+                            <a href="https://tarang00.github.io/FZPlumbing/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/tarang00/FZPlumbing" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="project-card reveal-fade">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/600/400" alt="Portfolio Website" class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">My personal portfolio website featuring modern UI/UX design, smooth animations, and responsive layout.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="project-card reveal-fade">
+                    <div class="project-image-container">
+                        <img src="/api/placeholder/600/400" alt="E-commerce Website" class="project-image">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">E-commerce Shop</h3>
+                        <p class="project-description">A modern e-commerce website with product filtering, shopping cart functionality, and payment integration.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Contact Me</h2>
+                <p class="section-subtitle reveal-text">Get in touch for work inquiries or just to say hello</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <h3>Let's Connect!</h3>
+                    <p>Feel free to reach out to me for any project inquiries, collaborations, or just to say hello. I'm always open to discussing new ideas and opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <a href="mailto:taranglilhare@gmail.com">taranglilhare@gmail.com</a>
+                                <span>Email Me</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <a href="tel:+917066766072">+91 7066 766 072</a>
+                                <span>Call Me</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                Maharashtra, India
+                                <span>Location</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                          <!-- <label for="name" class="form-label">Name</label> -->
+                            <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                            
+                        </div>
+                        <div class="form-group">
+                          <!-- <label for="email" class="form-label">Email</label> -->
+                          <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                          <!-- <label for="subject" class="form-label">Subject</label> -->
+                          <input type="text" id="subject" class="form-input" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                          <!-- <label for="message" class="form-label">Message</label> -->
+                          <textarea id="message" class="form-input form-textarea" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Tarang<span>Lilhare</span></a>
+                    <p class="footer-text">A passionate web developer focused on creating intuitive, responsive, and visually appealing web applications with clean and efficient code.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                        <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tarang Lilhare. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
